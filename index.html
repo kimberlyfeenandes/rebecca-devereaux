@@ -4,408 +4,261 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#08251b">
-<title>Rebecca Devereaux | The Emerald Garden</title>
+<title>Rebecca Devereaux | Emerald Garden</title>
+<meta name="theme-color" content="#09271c">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-:root {
-  --bg:#071910;
-  --green:#0d3022;
-  --emerald:#08764e;
-  --bright:#42e6a0;
-  --gold:#d8bd78;
-  --cream:#f4efdf;
-  --muted:#bdcbbb;
-  --line:rgba(216,189,120,.35);
-}
+:root{--bg:#092219;--panel:#103a29;--green:#0d7650;--light:#5bf0aa;--gold:#d9bd78;--cream:#f7f0df;--muted:#c2d2c5;--line:#d9bd7855}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:85px}
-body{
-  margin:0;background:var(--bg);color:var(--cream);
-  font:14px/1.8 'DM Sans',sans-serif;overflow-x:hidden
-}
-body:before{
-  content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;
-  background:
-    radial-gradient(ellipse at 15% 10%,#11654166,transparent 35%),
-    radial-gradient(ellipse at 90% 40%,#0c9a5b30,transparent 32%),
-    radial-gradient(ellipse at 50% 95%,#b5a34a17,transparent 45%)
-}
-body:after{
-  content:"✧  ·  ✦  ·  ❀  ·  ✧  ·  ✦  ·  ❀";
-  position:fixed;inset:0;pointer-events:none;z-index:5;
-  color:#80e9b025;font-size:18px;letter-spacing:30px;
-  word-spacing:40px;line-height:100px;overflow:hidden;
-  animation:twinkle 7s ease-in-out infinite alternate
-}
-@keyframes twinkle{from{opacity:.25}to{opacity:.8}}
-@keyframes glow{
-  0%,100%{text-shadow:0 0 8px #42e6a055}
-  50%{text-shadow:0 0 24px #42e6a0cc,0 0 45px #08764e99}
-}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--cream);font:14px/1.8 'DM Sans',sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 10% 5%,#16885455,transparent 35%),radial-gradient(ellipse at 90% 35%,#15a76b25,transparent 35%),radial-gradient(ellipse at 50% 95%,#c8a94a18,transparent 40%)}
+body:after{content:"✧     ❀      ✦      ❧      ✧";position:fixed;inset:0;pointer-events:none;color:#66f2ad18;font-size:26px;letter-spacing:25px;line-height:120px;word-break:break-all;z-index:5;animation:twinkle 5s infinite alternate}
+@keyframes twinkle{from{opacity:.3}to{opacity:1}}
+@keyframes glow{0%,100%{text-shadow:0 0 8px #5bf0aa55}50%{text-shadow:0 0 25px #5bf0aacc,0 0 45px #0d7650}}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-@keyframes shine{0%{background-position:-200%}100%{background-position:200%}}
-@keyframes appear{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes appear{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 a{color:inherit;text-decoration:none}
 img{max-width:100%}
 .serif{font-family:'Cormorant Garamond',Georgia,serif}
 .gold{color:var(--gold)}
-.eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:.25em;color:var(--bright)}
+.eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:.22em;color:var(--light)}
 .muted{color:var(--muted)}
-button{font:inherit}
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:20;
-  background:#071910eF;backdrop-filter:blur(16px);
-  border-bottom:1px solid var(--line)
-}
-.nav-inner{
-  max-width:1200px;margin:auto;padding:13px 5%;
-  display:flex;align-items:center;justify-content:space-between;gap:15px
-}
-.brand{font:25px 'Cormorant Garamond',serif;white-space:nowrap}
-.brand span{color:var(--bright);animation:glow 4s infinite}
-.nav-links{display:flex;gap:17px;flex-wrap:wrap}
-.nav-links a{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#d1dece}
-.nav-links a:hover{color:var(--bright);text-shadow:0 0 12px #42e6a0}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;background:#092219ed;backdrop-filter:blur(15px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1200px;margin:auto;padding:12px 5%;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.brand{font:26px 'Cormorant Garamond',serif;white-space:nowrap}
+.brand span{color:var(--light);animation:glow 4s infinite}
+.nav-links{display:flex;gap:15px;flex-wrap:wrap}
+.nav-links a{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#dce7dc}
+.nav-links a:hover{color:var(--light)}
 .menu{display:none;background:transparent;border:1px solid var(--line);color:white;padding:6px 12px}
-.hero{
-  min-height:100svh;max-width:1300px;margin:auto;padding:125px 7% 75px;
-  display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:6vw;
-  position:relative
-}
-.hero:before{
-  content:"❦";position:absolute;top:120px;right:5%;
-  font-size:80px;color:#42e6a018;animation:float 6s infinite
-}
-.monogram{
-  display:grid;place-items:center;width:74px;height:74px;border-radius:50%;
-  border:1px solid var(--gold);color:var(--bright);
-  font:38px 'Cormorant Garamond',serif;
-  box-shadow:0 0 25px #42e6a025,inset 0 0 18px #42e6a015;
-  margin-bottom:28px
-}
-.hero h1{
-  font:500 clamp(55px,8vw,108px)/.82 'Cormorant Garamond',serif;
-  margin:20px 0 30px;letter-spacing:-.04em
-}
-.hero h1 span{display:block;margin-left:35px;color:var(--bright);font-style:italic;animation:glow 5s infinite}
-.hero p{max-width:430px;color:var(--muted)}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
-.btn{
-  display:inline-block;padding:12px 20px;border:1px solid var(--gold);
-  color:var(--gold);font-size:10px;letter-spacing:.16em;text-transform:uppercase;
-  background:#0d302288;transition:.3s;cursor:pointer
-}
-.btn:hover{background:var(--bright);color:#062016;border-color:var(--bright);box-shadow:0 0 25px #42e6a055}
-.hero-visual{position:relative;padding:12px;border:1px solid var(--line);background:#0d302255}
-.hero-visual:before,.hero-visual:after{
-  content:"❀";position:absolute;z-index:2;color:var(--bright);
-  font-size:40px;text-shadow:0 0 20px #42e6a0aa
-}
-.hero-visual:before{top:-23px;left:-20px}
-.hero-visual:after{bottom:-20px;right:-17px}
-.hero-visual img{display:block;width:100%;height:min(70vh,650px);object-fit:cover;object-position:center}
-.seal{
-  position:absolute;bottom:30px;right:-25px;width:100px;height:100px;
-  border-radius:50%;background:#09251aee;border:1px solid var(--gold);
-  display:grid;place-items:center;text-align:center;
-  font:italic 20px/1 'Cormorant Garamond',serif;color:var(--gold);
-  transform:rotate(-9deg);box-shadow:0 0 25px #42e6a030
-}
-main section{max-width:1200px;margin:auto;padding:95px 6%}
-.heading{margin-bottom:38px}
-.heading h2{font:500 clamp(42px,6vw,70px)/.95 'Cormorant Garamond',serif;margin:12px 0}
-.heading p{max-width:500px;color:var(--muted)}
-.heading h2 em{color:var(--bright)}
+.hero{min-height:100svh;max-width:1300px;margin:auto;padding:125px 7% 75px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:6vw;position:relative}
+.hero:before{content:"❦";position:absolute;top:120px;right:5%;font-size:85px;color:#5bf0aa22;animation:float 6s infinite}
+.monogram{width:75px;height:75px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--gold);color:var(--light);font:38px 'Cormorant Garamond',serif;box-shadow:0 0 28px #5bf0aa25;margin-bottom:25px}
+.hero h1{font:500 clamp(55px,8vw,105px)/.85 'Cormorant Garamond',serif;margin:20px 0 30px;letter-spacing:-.04em}
+.hero h1 span{display:block;margin-left:25px;color:var(--light);font-style:italic;animation:glow 5s infinite}
+.hero p{max-width:440px;color:var(--muted)}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;padding:11px 18px;border:1px solid var(--gold);color:var(--gold);font-size:10px;letter-spacing:.13em;text-transform:uppercase;background:#103a2977;cursor:pointer;transition:.3s}
+.btn:hover{background:var(--light);color:#092219;border-color:var(--light);box-shadow:0 0 25px #5bf0aa55}
+.hero-visual{position:relative;padding:11px;border:1px solid var(--gold);background:linear-gradient(135deg,#5bf0aa22,#d9bd7811);box-shadow:0 0 40px #0d765033}
+.hero-visual:before,.hero-visual:after{content:"❀";position:absolute;z-index:2;color:var(--light);font-size:40px;text-shadow:0 0 18px #5bf0aa}
+.hero-visual:before{top:-22px;left:-18px}.hero-visual:after{bottom:-22px;right:-15px}
+.hero-visual img{display:block;width:100%;height:min(68vh,650px);object-fit:cover}
+.seal{position:absolute;bottom:28px;right:-20px;width:95px;height:95px;border-radius:50%;background:#092219ee;border:1px solid var(--gold);display:grid;place-items:center;text-align:center;font:italic 20px/1 'Cormorant Garamond',serif;color:var(--gold);transform:rotate(-8deg)}
+main section{max-width:1200px;margin:auto;padding:85px 6%}
+.heading{margin-bottom:35px}
+.heading h2{font:500 clamp(42px,6vw,68px)/.98 'Cormorant Garamond',serif;margin:12px 0}
+.heading h2 em{color:var(--light)}
+.heading p{max-width:560px;color:var(--muted)}
 .profile{display:grid;grid-template-columns:.8fr 1.2fr;gap:6vw;align-items:center}
-.frame{padding:10px;border:1px solid var(--line);position:relative;background:#0d302255}
-.frame:after{content:"✧";position:absolute;top:-18px;right:-12px;font-size:35px;color:var(--bright);text-shadow:0 0 15px #42e6a0}
-.frame img{width:100%;height:440px;object-fit:cover;display:block}
-.profile h3,.panel h3{font:500 38px/1 'Cormorant Garamond',serif;margin-top:0}
+.frame{padding:10px;border:1px solid var(--gold);position:relative;background:#103a2966}
+.frame:after{content:"✧";position:absolute;top:-18px;right:-12px;font-size:35px;color:var(--light);text-shadow:0 0 15px #5bf0aa}
+.frame img{width:100%;height:430px;object-fit:cover;display:block}
+.profile h3,.panel h3{font:500 38px/1 'Cormorant Garamond',serif}
 .facts{display:grid;grid-template-columns:1fr 1fr;gap:10px 20px;margin-top:25px}
 .fact{padding:12px 0;border-bottom:1px solid var(--line)}
-.fact label{display:block;color:var(--bright);font-size:9px;letter-spacing:.16em;text-transform:uppercase}
+.fact label{display:block;color:var(--light);font-size:9px;letter-spacing:.15em;text-transform:uppercase}
 .fact strong{font-weight:400}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
-.card{
-  position:relative;padding:27px;border:1px solid var(--line);
-  background:linear-gradient(145deg,#10523855,#07191099);
-  transition:.3s;overflow:hidden
-}
-.card:after{content:"❧";position:absolute;right:10px;bottom:-12px;font-size:50px;color:#42e6a018}
-.card:hover{transform:translateY(-6px);border-color:var(--bright);box-shadow:0 0 28px #08764e35}
-.card .symbol{font:32px 'Cormorant Garamond',serif;color:var(--bright)}
-.card h3{font:500 29px/1 'Cormorant Garamond',serif;margin:12px 0}
+.card{position:relative;padding:25px;border:1px solid var(--line);background:linear-gradient(145deg,#14563b88,#092219aa);transition:.3s;overflow:hidden}
+.card:after{content:"❧";position:absolute;right:10px;bottom:-15px;font-size:52px;color:#5bf0aa22}
+.card:hover{transform:translateY(-5px);border-color:var(--light);box-shadow:0 0 25px #0d765044}
+.card .symbol{font:34px 'Cormorant Garamond',serif;color:var(--light)}
+.card h3{font:500 29px/1.1 'Cormorant Garamond',serif;margin:12px 0}
 .card p{font-size:12px;color:var(--muted)}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
-.quote{
-  padding:35px;border:1px solid var(--line);
-  background:linear-gradient(140deg,#10523855,#071910aa);
-  box-shadow:inset 0 0 30px #42e6a008
-}
-.quote blockquote{font:italic 32px/1.15 'Cormorant Garamond',serif;margin:10px 0 20px}
-.quote cite{font-size:9px;letter-spacing:.16em;color:var(--gold);font-style:normal}
+.quote{padding:30px;border:1px solid var(--line);background:linear-gradient(140deg,#14563b66,#092219aa)}
+.quote blockquote{font:italic 31px/1.2 'Cormorant Garamond',serif;margin:10px 0 20px}
+.quote cite{font-size:9px;letter-spacing:.13em;color:var(--gold);font-style:normal}
 .interest{display:grid;grid-template-columns:55px 1fr;gap:18px;padding:20px 0;border-bottom:1px solid var(--line)}
-.interest .num{font:italic 28px 'Cormorant Garamond',serif;color:var(--bright)}
+.interest .num{font:italic 28px 'Cormorant Garamond',serif;color:var(--light)}
 .interest h3{font:500 27px/1 'Cormorant Garamond',serif;margin:0 0 8px}
 .interest p{font-size:12px;color:var(--muted);margin:0}
-.botany{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line)}
-.botany img{width:100%;height:390px;object-fit:cover;display:block}
-.botany .text{padding:35px;align-self:center}
-.botany h3{font:500 42px/1 'Cormorant Garamond',serif}
+.botany{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);background:#103a2933}
+.botany img{width:100%;height:380px;object-fit:cover;display:block}
+.botany .text{padding:30px;align-self:center}
+.botany h3{font:500 40px/1.05 'Cormorant Garamond',serif}
 .family{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.family article{padding:28px;border-top:1px solid var(--bright);background:#0d302266}
-.family h3{font:500 34px 'Cormorant Garamond',serif;margin:5px 0}
+.family article{padding:25px;border-top:1px solid var(--light);background:#103a2966}
+.family h3{font:500 32px 'Cormorant Garamond',serif;margin:5px 0}
 .family p{color:var(--muted);font-size:12px}
-.tag{display:inline-block;border:1px solid var(--line);padding:5px 9px;margin:4px;color:#c5f2d6;font-size:9px;letter-spacing:.1em;text-transform:uppercase}
+.tag{display:inline-block;border:1px solid var(--line);padding:5px 9px;margin:4px;color:#c5f2d6;font-size:9px;letter-spacing:.08em;text-transform:uppercase}
 .verso{display:grid;grid-template-columns:.9fr 1.1fr;gap:6vw;align-items:center}
-.verso img{width:100%;height:430px;object-fit:cover}
+.verso img{width:100%;height:420px;object-fit:cover}
 .verso h3{font:500 65px/.9 'Cormorant Garamond',serif;margin:15px 0}
 .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.gallery figure{margin:0;position:relative;height:280px;overflow:hidden;border:1px solid var(--line);background:#0d3022}
-.gallery figure:nth-child(even){margin-top:25px}
+.gallery figure{margin:0;position:relative;height:275px;overflow:hidden;border:1px solid var(--line);background:#103a29}
+.gallery figure:nth-child(even){margin-top:22px}
 .gallery img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
 .gallery figure:hover img{transform:scale(1.08)}
-.gallery figcaption{position:absolute;bottom:0;left:0;right:0;padding:28px 12px 10px;background:linear-gradient(transparent,#06130eee);font:italic 20px 'Cormorant Garamond',serif}
-.archive{
-  border:1px solid var(--gold);padding:clamp(25px,5vw,55px);
-  background:radial-gradient(ellipse at top right,#0b704b55,transparent 50%),#0b251a;
-  position:relative
-}
-.archive:before{content:"✧ ❀ ✧";color:var(--bright);font-size:24px;letter-spacing:12px}
-.archive h2{font:500 clamp(42px,6vw,65px)/.95 'Cormorant Garamond',serif}
+.gallery figcaption{position:absolute;bottom:0;left:0;right:0;padding:28px 12px 10px;background:linear-gradient(transparent,#06150eee);font:italic 20px 'Cormorant Garamond',serif}
+.archive{border:1px solid var(--gold);padding:clamp(25px,5vw,50px);background:radial-gradient(ellipse at top right,#0d765055,transparent 55%),#0b2b1d}
+.archive:before{content:"✧  ❀  ✧";color:var(--light);font-size:23px;letter-spacing:10px}
+.archive h2{font:500 clamp(42px,6vw,64px)/1 'Cormorant Garamond',serif}
 .archive p{color:var(--muted);max-width:750px}
-.secret{display:none;border-left:2px solid var(--bright);padding:18px;margin-top:20px;background:#06130e}
+.secret{display:none;border-left:2px solid var(--light);padding:18px;margin-top:20px;background:#06150e}
 .secret.open{display:block;animation:appear .4s}
-footer{text-align:center;padding:45px 6%;border-top:1px solid var(--line);background:#06130e}
+footer{text-align:center;padding:40px 6%;border-top:1px solid var(--line);background:#06170f}
 footer p{font-size:10px;letter-spacing:.12em;color:var(--muted)}
-.sparkle{color:var(--bright);text-shadow:0 0 15px #42e6a0;animation:glow 4s infinite}
-.reveal{animation:appear .9s both}
 @media(max-width:800px){
- .nav-inner{flex-wrap:wrap}.menu{display:block}
- .nav-links{display:none;width:100%;padding:10px 0;flex-direction:column;align-items:flex-start}
- .nav-links.open{display:flex}
- .hero{grid-template-columns:1fr;padding-top:125px;gap:35px}
- .hero-visual img{height:470px}
- main section{padding:70px 6%}
- .profile,.two,.botany,.verso{grid-template-columns:1fr}
- .profile .frame img{height:390px}
- .cards{grid-template-columns:1fr 1fr}
- .gallery{grid-template-columns:1fr 1fr}
- .gallery figure{height:240px}
- .family{grid-template-columns:1fr}
- .botany img{height:300px}
- .seal{right:-10px}
+.nav-inner{flex-wrap:wrap}.menu{display:block}
+.nav-links{display:none;width:100%;padding:10px 0;flex-direction:column;align-items:flex-start}
+.nav-links.open{display:flex}
+.hero{grid-template-columns:1fr;padding-top:120px;gap:35px}
+.hero-visual img{height:450px}
+main section{padding:65px 6%}
+.profile,.two,.botany,.verso{grid-template-columns:1fr}
+.profile .frame img{height:380px}
+.cards{grid-template-columns:1fr 1fr}
+.gallery{grid-template-columns:1fr 1fr}
+.gallery figure{height:230px}
+.family{grid-template-columns:1fr}
+.botany img{height:300px}
+.seal{right:-10px}
 }
 @media(max-width:430px){
- .cards{grid-template-columns:1fr}
- .facts{grid-template-columns:1fr 1fr}
- .hero h1{font-size:58px}
- .gallery figure{height:200px}
- .gallery figure:nth-child(even){margin-top:15px}
- .quote{padding:24px}
+.cards{grid-template-columns:1fr}
+.hero h1{font-size:58px}
+.gallery figure{height:200px}
+.facts{grid-template-columns:1fr 1fr}
 }
 </style>
 </head>
 <body>
 <nav>
-  <div class="nav-inner">
-    <a class="brand" href="#inicio">Rebecca <span>✧</span> Devereaux</a>
-    <button class="menu" id="menu" aria-label="Abrir menu">☰</button>
-    <div class="nav-links" id="links">
-      <a href="#perfil">Perfil</a>
-      <a href="#personalidade">Personalidade</a>
-      <a href="#botanica">Botânica</a>
-      <a href="#interesses">Interesses</a>
-      <a href="#familia">Família</a>
-      <a href="#selecao">Seleção</a>
-      <a href="#verso">Verso</a>
-      <a href="#galeria">Galeria</a>
-      <a href="#arquivo">Arquivo</a>
-    </div>
-  </div>
+<div class="nav-inner">
+<a class="brand" href="#inicio">Rebecca <span>✧</span> Devereaux</a>
+<button class="menu" id="menu">☰</button>
+<div class="nav-links" id="links">
+<a href="#perfil">Perfil</a><a href="#personalidade">Personalidade</a><a href="#botanica">Botânica</a><a href="#interesses">Interesses</a><a href="#familia">Família</a><a href="#selecao">Seleção</a><a href="#verso">Verso</a><a href="#galeria">Galeria</a><a href="#arquivo">Arquivo</a>
+</div>
+</div>
 </nav>
 
 <header class="hero" id="inicio">
-  <div class="reveal">
-    <div class="monogram">R<span class="gold">.</span>D.</div>
-    <div class="eyebrow">✧ Lythael · Arquivo pessoal ✧</div>
-    <h1>Rebecca <span>Devereaux</span></h1>
-    <p>Uma presença delicada, uma mente estratégica e uma curiosidade que nunca se contenta com a superfície. Por trás da elegância, há perguntas que ainda aguardam respostas.</p>
-    <div class="actions">
-      <a class="btn" href="#perfil">Conheça Rebecca</a>
-      <a class="btn" href="#arquivo">Registro reservado ✧</a>
-    </div>
-    <p class="eyebrow" style="margin-top:30px">❀ Conhecimento · Ambição · Discrição ❀</p>
-  </div>
-  <div class="hero-visual reveal">
-    <img src="267365.jpg" alt="Retrato principal de Rebecca Devereaux">
-    <div class="seal">The<br>Emerald<br>Garden</div>
-  </div>
+<div>
+<div class="monogram">R.D.</div>
+<div class="eyebrow">✧ Lythael · Arquivo pessoal ✧</div>
+<h1>Rebecca <span>Devereaux</span></h1>
+<p>Uma presença delicada, uma mente estratégica e uma curiosidade que nunca se contenta com a superfície. Por trás da elegância, há perguntas que ainda aguardam respostas.</p>
+<div class="actions"><a class="btn" href="#perfil">Conheça Rebecca</a><a class="btn" href="#arquivo">Registro reservado ✧</a></div>
+<p class="eyebrow" style="margin-top:28px">❀ Conhecimento · Ambição · Discrição ❀</p>
+</div>
+<div class="hero-visual">
+<img src="267365.jpg" alt="Retrato principal de Rebecca">
+<div class="seal">The<br>Emerald<br>Garden</div>
+</div>
 </header>
 
 <main>
 <section id="perfil">
-  <div class="heading reveal">
-    <div class="eyebrow">01 / Identidade</div>
-    <h2>Um nome entre<br><em>flores e segredos.</em></h2>
-  </div>
-  <div class="profile reveal">
-    <div class="frame"><img src="rebecca-perfil.jpg" alt="Retrato de Rebecca"></div>
-    <div>
-      <div class="eyebrow">A herdeira de Lythael</div>
-      <h3>Elegância por escolha.<br><span class="gold">Estratégia por natureza.</span></h3>
-      <p class="muted">Rebecca Devereaux tem 25 anos e pertence à elite influente de Lythael, sem possuir sangue real. Cresceu em uma família próxima, cercada de afeto e de expectativas à altura do nome que carrega. Diplomática e ambiciosa, sabe que a informação pode abrir portas que a posição social, sozinha, jamais abriria.</p>
-      <div class="facts">
-        <div class="fact"><label>Idade</label><strong>25 anos</strong></div>
-        <div class="fact"><label>Origem</label><strong>Lythael</strong></div>
-        <div class="fact"><label>Posição social</label><strong>Elite influente</strong></div>
-        <div class="fact"><label>Família</label><strong>Casa Devereaux</strong></div>
-        <div class="fact"><label>Temperamento</label><strong>Diplomática</strong></div>
-        <div class="fact"><label>Ambição</label><strong>Conhecimento</strong></div>
-      </div>
-    </div>
-  </div>
+<div class="heading"><div class="eyebrow">01 / Identidade</div><h2>Um nome entre<br><em>flores e segredos.</em></h2></div>
+<div class="profile">
+<div class="frame"><img src="rebecca-perfil.jpg" alt="Retrato de Rebecca"></div>
+<div><div class="eyebrow">A herdeira de Lythael</div><h3>Elegância por escolha.<br><span class="gold">Estratégia por natureza.</span></h3>
+<p class="muted">Rebecca Devereaux tem 25 anos e pertence à elite influente de Lythael, sem possuir sangue real. Cresceu em uma família próxima, cercada de afeto e de expectativas à altura do nome que carrega. Diplomática e ambiciosa, sabe que a informação pode abrir portas que a posição social, sozinha, jamais abriria.</p>
+<div class="facts">
+<div class="fact"><label>Idade</label><strong>25 anos</strong></div><div class="fact"><label>Origem</label><strong>Lythael</strong></div>
+<div class="fact"><label>Posição social</label><strong>Elite influente</strong></div><div class="fact"><label>Família</label><strong>Casa Devereaux</strong></div>
+<div class="fact"><label>Temperamento</label><strong>Diplomática</strong></div><div class="fact"><label>Ambição</label><strong>Conhecimento</strong></div>
+</div></div>
+</div>
 </section>
 
 <section id="personalidade">
-  <div class="heading reveal">
-    <div class="eyebrow">02 / Essência</div>
-    <h2>Uma mente que floresce<br><em>nas entrelinhas.</em></h2>
-    <p>Nem tudo precisa ser dito para ser compreendido — e nem tudo que é compreendido precisa ser revelado.</p>
-  </div>
-  <div class="cards reveal">
-    <article class="card"><div class="symbol">✧</div><h3>Diplomática</h3><p>Prefere observar, escolher as palavras e compreender as intenções antes de agir.</p></article>
-    <article class="card"><div class="symbol">❦</div><h3>Ambiciosa</h3><p>Seu desejo de avançar está ligado à busca por conhecimento e por verdades que permanecem escondidas.</p></article>
-    <article class="card"><div class="symbol">☾</div><h3>Difícil de decifrar</h3><p>Apresenta uma postura agradável em público, mas preserva uma parte de si que poucos conseguem conhecer.</p></article>
-  </div>
-  <div class="two reveal" style="margin-top:35px">
-    <div class="quote"><blockquote>“Nem toda verdade precisa ser encontrada em voz alta.”</blockquote><cite>Frase decorativa · não canônica</cite></div>
-    <div><p class="muted">Rebecca pode ceder quando considera algo pouco importante, defender suas escolhas com calma quando necessário ou manter sua posição sem transformar tudo em confronto. Sua reação depende da situação — e dos riscos envolvidos.</p></div>
-  </div>
+<div class="heading"><div class="eyebrow">02 / Essência</div><h2>Uma mente que floresce<br><em>nas entrelinhas.</em></h2><p>Nem tudo precisa ser dito para ser compreendido — e nem tudo que é compreendido precisa ser revelado.</p></div>
+<div class="cards">
+<article class="card"><div class="symbol">✧</div><h3>Diplomática</h3><p>Prefere observar, escolher as palavras e compreender as intenções antes de agir.</p></article>
+<article class="card"><div class="symbol">❦</div><h3>Ambiciosa</h3><p>Seu desejo de avançar está ligado à busca por conhecimento e por verdades escondidas.</p></article>
+<article class="card"><div class="symbol">☾</div><h3>Difícil de decifrar</h3><p>Apresenta uma postura agradável em público, mas preserva uma parte de si que poucos conseguem conhecer.</p></article>
+</div>
+<div class="two" style="margin-top:30px">
+<div class="quote"><blockquote>“Nem toda verdade precisa ser encontrada em voz alta.”</blockquote><cite>Frase decorativa · não canônica</cite></div>
+<p class="muted">Rebecca pode ceder quando considera algo pouco importante, defender suas escolhas com calma quando necessário ou manter sua posição sem transformar tudo em confronto. Sua reação depende da situação e dos riscos envolvidos.</p>
+</div>
 </section>
 
 <section id="botanica">
-  <div class="heading reveal">
-    <div class="eyebrow">03 / Herbário pessoal</div>
-    <h2>Onde o silêncio<br><em>também floresce.</em></h2>
-  </div>
-  <div class="botany reveal">
-    <img src="rebecca-galeria-1-1.jpg" alt="Referência visual botânica">
-    <div class="text">
-      <div class="eyebrow">❀ Natureza · Observação · Paciência</div>
-      <h3>Uma atenção especial ao mundo natural.</h3>
-      <p class="muted">A botânica faz parte dos interesses de Rebecca. O modo como esse interesse começou, sua prática e a extensão de seus conhecimentos permanecem em aberto para serem definidos durante o RPG.</p>
-      <span class="tag">Botânica</span><span class="tag">Observação</span><span class="tag">Conhecimento</span>
-    </div>
-  </div>
+<div class="heading"><div class="eyebrow">03 / Herbário pessoal</div><h2>Onde o silêncio<br><em>também floresce.</em></h2></div>
+<div class="botany">
+<img src="rebecca-galeria-1-1.jpg" alt="Referência botânica">
+<div class="text"><div class="eyebrow">❀ Natureza · Observação · Paciência</div><h3>Uma atenção especial ao mundo natural.</h3><p class="muted">A botânica faz parte dos interesses de Rebecca. O modo como esse interesse começou, sua prática e a extensão de seus conhecimentos permanecem em aberto para serem definidos durante o RPG.</p><span class="tag">Botânica</span><span class="tag">Observação</span><span class="tag">Conhecimento</span></div>
+</div>
 </section>
 
 <section id="interesses">
-  <div class="heading reveal">
-    <div class="eyebrow">04 / Interesses pessoais</div>
-    <h2>Pequenos mundos<br><em>particulares.</em></h2>
-  </div>
-  <div class="interest reveal"><div class="num">01</div><div><h3>Poesia</h3><p>Escreve poemas, e seu estilo pode variar conforme o estado emocional.</p></div></div>
-  <div class="interest reveal"><div class="num">02</div><div><h3>Música</h3><p>O piano e o violino fazem parte de seus interesses musicais.</p></div></div>
-  <div class="interest reveal"><div class="num">03</div><div><h3>Cozinha afetiva</h3><p>Gosta de preparar comidas caseiras e reconfortantes, longe da formalidade dos salões.</p></div></div>
-  <div class="interest reveal"><div class="num">04</div><div><h3>Conhecimento</h3><p>A curiosidade e a busca por respostas estão entre os motores centrais de sua ambição.</p></div></div>
+<div class="heading"><div class="eyebrow">04 / Interesses pessoais</div><h2>Pequenos mundos<br><em>particulares.</em></h2></div>
+<div class="interest"><div class="num">01</div><div><h3>Poesia</h3><p>Escreve poemas, e seu estilo pode variar conforme o estado emocional.</p></div></div>
+<div class="interest"><div class="num">02</div><div><h3>Música</h3><p>O piano e o violino fazem parte de seus interesses musicais.</p></div></div>
+<div class="interest"><div class="num">03</div><div><h3>Cozinha afetiva</h3><p>Gosta de preparar comidas caseiras e reconfortantes, longe da formalidade dos salões.</p></div></div>
+<div class="interest"><div class="num">04</div><div><h3>Conhecimento</h3><p>A curiosidade e a busca por respostas estão entre os motores centrais de sua ambição.</p></div></div>
 </section>
 
 <section id="familia">
-  <div class="heading reveal">
-    <div class="eyebrow">05 / Casa Devereaux</div>
-    <h2>Afeto e<br><em>expectativas.</em></h2>
-    <p>Uma família próxima, marcada pelo carinho e pelo peso de representar um nome influente.</p>
-  </div>
-  <div class="family reveal">
-    <article><div class="eyebrow">Pai · Duque</div><h3>Alexander Devereaux</h3><p>Influente e diplomático, preocupa-se com a reputação e o prestígio da família. Sua relação com Rebecca é afetuosa, embora suas expectativas possam pesar sobre as escolhas dela.</p></article>
-    <article><div class="eyebrow">Mãe · Condessa</div><h3>Vivienne Devereaux</h3><p>Refinada e estratégica, administra a casa e suas alianças sociais. Ama a filha e espera que ela compreenda a responsabilidade do nome que carrega.</p></article>
-  </div>
-  <div class="two reveal" style="margin-top:30px">
-    <h3 class="serif" style="font-size:38px">Filha única.<br><span class="gold">Herdeira dos interesses familiares.</span></h3>
-    <p class="muted">Rebecca é a herdeira dos interesses políticos e comerciais da família. O vínculo familiar é amoroso, mas isso não elimina as diferenças entre aquilo que esperam dela e aquilo que deseja para si.</p>
-  </div>
+<div class="heading"><div class="eyebrow">05 / Casa Devereaux</div><h2>Afeto e<br><em>expectativas.</em></h2><p>Uma família próxima, marcada pelo carinho e pelo peso de representar um nome influente.</p></div>
+<div class="family">
+<article><div class="eyebrow">Pai · Duque</div><h3>Alexander Devereaux</h3><p>Influente e diplomático, preocupa-se com a reputação e o prestígio da família. Sua relação com Rebecca é afetuosa, embora suas expectativas possam pesar sobre as escolhas dela.</p></article>
+<article><div class="eyebrow">Mãe · Condessa</div><h3>Vivienne Devereaux</h3><p>Refinada e estratégica, administra a casa e suas alianças sociais. Ama a filha e espera que ela compreenda a responsabilidade do nome que carrega.</p></article>
+</div>
+<div class="two" style="margin-top:25px"><h3 class="serif" style="font-size:36px">Filha única.<br><span class="gold">Herdeira dos interesses familiares.</span></h3><p class="muted">Rebecca é a herdeira dos interesses políticos e comerciais da família. O vínculo familiar é amoroso, mas isso não elimina as diferenças entre aquilo que esperam dela e aquilo que deseja para si.</p></div>
 </section>
 
 <section id="selecao">
-  <div class="heading reveal">
-    <div class="eyebrow">06 / A Seleção</div>
-    <h2>Uma escolha<br><em>com propósito.</em></h2>
-  </div>
-  <div class="two reveal">
-    <div class="quote"><blockquote>“Algumas portas se abrem por tradição. Outras precisam ser atravessadas por vontade própria.”</blockquote><cite>Frase decorativa · não canônica</cite></div>
-    <div><h3 class="serif" style="font-size:38px">Interesse político e pessoal.</h3><p class="muted">Rebecca participa da Seleção por razões políticas e pessoais. Sua posição social e seu desejo de ampliar o próprio conhecimento podem coexistir, mas seus objetivos concretos ainda não foram definidos.</p><p class="muted">A possibilidade de romance permanece aberta, sem par ou interesse amoroso estabelecido.</p></div>
-  </div>
+<div class="heading"><div class="eyebrow">06 / A Seleção</div><h2>Uma escolha<br><em>com propósito.</em></h2></div>
+<div class="two"><div class="quote"><blockquote>“Algumas portas se abrem por tradição. Outras precisam ser atravessadas por vontade própria.”</blockquote><cite>Frase decorativa · não canônica</cite></div><div><h3 class="serif" style="font-size:36px">Interesse político e pessoal.</h3><p class="muted">Rebecca participa da Seleção por razões políticas e pessoais. Sua posição social e seu desejo de ampliar o próprio conhecimento podem coexistir, mas seus objetivos concretos ainda não foram definidos.</p><p class="muted">A possibilidade de romance permanece aberta, sem par ou interesse amoroso estabelecido.</p></div></div>
 </section>
 
 <section id="verso">
-  <div class="heading reveal">
-    <div class="eyebrow">07 / Companhia inesperada</div>
-    <h2>O pequeno mistério<br><em>chamado Verso.</em></h2>
-  </div>
-  <div class="verso reveal">
-    <div class="frame"><img src="verso.jpg" alt="Verso, gato British Longhair"></div>
-    <div><div class="eyebrow">British Longhair · Macho</div><h3>Verso<span class="gold">.</span></h3>
-      <p class="muted">Cinza, de pelagem longa e volumosa, olhos verdes claros e uma presença tão elegante quanto independente. É apegado a Rebecca, gosta de dormir no colo dela, mas também valoriza seu espaço e prefere sua própria caminha.</p>
-      <p class="muted">Rebecca o encontrou ainda na adolescência, sozinho em seu quarto. Ele havia sido deixado como presente por um admirador secreto, cuja identidade ela desconhece. Nenhum outro objeto o acompanhava.</p>
-      <p class="muted">O nome foi escolhido por sua ligação com a poesia. Seu significado pessoal exato permanece em aberto.</p>
-      <span class="tag">Olhos verde-claros</span><span class="tag">Pelagem cinza</span><span class="tag">Afetuoso e independente</span>
-    </div>
-  </div>
+<div class="heading"><div class="eyebrow">07 / Companhia inesperada</div><h2>O pequeno mistério<br><em>chamado Verso.</em></h2></div>
+<div class="verso">
+<div class="frame"><img src="verso.jpg" alt="Verso, gato British Longhair"></div>
+<div><div class="eyebrow">British Longhair · Macho</div><h3>Verso<span class="gold">.</span></h3><p class="muted">Cinza, de pelagem longa e volumosa, olhos verdes claros e uma presença tão elegante quanto independente. É apegado a Rebecca, gosta de dormir no colo dela, mas também valoriza seu espaço e prefere sua própria caminha.</p><p class="muted">Rebecca o encontrou ainda na adolescência, sozinho em seu quarto. Ele havia sido deixado como presente por um admirador secreto, cuja identidade ela desconhece. Nenhum outro objeto o acompanhava.</p><p class="muted">O nome foi escolhido por sua ligação com a poesia. Seu significado pessoal exato permanece em aberto.</p><span class="tag">Olhos verde-claros</span><span class="tag">Pelagem cinza</span><span class="tag">Afetuoso e independente</span></div>
+</div>
 </section>
 
 <section id="galeria">
-  <div class="heading reveal">
-    <div class="eyebrow">08 / Galeria visual</div>
-    <h2>Fragmentos de<br><em>uma presença.</em></h2>
-    <p>Retratos e referências visuais para compor o universo de Rebecca.</p>
-  </div>
-  <div class="gallery reveal">
-    <figure><img src="267365.jpg" alt="Retrato principal de Rebecca"><figcaption>Esmeralda</figcaption></figure>
-    <figure><img src="rebecca-galeria-1.jpg" alt="Retrato de Rebecca"><figcaption>Retrato I</figcaption></figure>
-    <figure><img src="rebecca-galeria-2.jpg" alt="Rebecca em verde"><figcaption>Verde profundo</figcaption></figure>
-    <figure><img src="rebecca-galeria-4.jpg" alt="Retrato de Rebecca"><figcaption>Retrato IV</figcaption></figure>
-    <figure><img src="rebecca-galeria-1-1.jpg" alt="Referência botânica"><figcaption>Herbário</figcaption></figure>
-    <figure><img src="rebecca-perfil.jpg" alt="Retrato de perfil"><figcaption>Perfil</figcaption></figure>
-    <figure><img src="verso-1.jpg" alt="Verso"><figcaption>Verso</figcaption></figure>
-    <figure><img src="verso.jpg" alt="Verso, companheiro de Rebecca"><figcaption>Pequeno mistério</figcaption></figure>
-  </div>
+<div class="heading"><div class="eyebrow">08 / Galeria visual</div><h2>Fragmentos de<br><em>uma presença.</em></h2><p>Retratos e referências visuais para compor o universo de Rebecca.</p></div>
+<div class="gallery">
+<figure><img src="267365.jpg" alt="Retrato principal de Rebecca"><figcaption>Esmeralda</figcaption></figure>
+<figure><img src="rebecca-galeria-1.jpg" alt="Retrato de Rebecca"><figcaption>Retrato I</figcaption></figure>
+<figure><img src="rebecca-galeria-2.jpg" alt="Rebecca em verde"><figcaption>Verde profundo</figcaption></figure>
+<figure><img src="rebecca-galeria-4.jpg" alt="Retrato de Rebecca"><figcaption>Retrato IV</figcaption></figure>
+<figure><img src="rebecca-galeria-1-1.jpg" alt="Referência botânica"><figcaption>Herbário</figcaption></figure>
+<figure><img src="rebecca-perfil.jpg" alt="Retrato de perfil"><figcaption>Perfil</figcaption></figure>
+<figure><img src="verso-1.jpg" alt="Verso"><figcaption>Verso</figcaption></figure>
+<figure><img src="verso.jpg" alt="Verso, companheiro de Rebecca"><figcaption>Pequeno mistério</figcaption></figure>
+</div>
 </section>
 
 <section id="arquivo">
-  <div class="archive reveal">
-    <div class="eyebrow">09 / Registro restrito · ✧</div>
-    <h2>O arquivo <em class="gold">incompleto.</em></h2>
-    <p>Há uma parte da história de Rebecca que não será explicada aqui. Seu vínculo com uma instituição de pesquisa ligada aos registros da pandemia, assim como o encobrimento de informações do qual participou, permanecerá reservado para ser revelado durante o RPG.</p>
-    <p>Este espaço é deliberadamente incompleto. Nenhum documento, nome, motivo ou consequência adicional será presumido antes de ser definido pela autora.</p>
-    <button class="btn" id="open-secret">✧ Abrir nota reservada</button>
-    <div class="secret" id="secret">REGISTRO RESERVADO: Rebecca teve contato com uma instituição de pesquisa relacionada aos registros da pandemia. Ao descobrir algo que a assustou, entrou em pânico e participou de um encobrimento. Uma pessoa ligada à instituição conhece o segredo. Os detalhes permanecem indefinidos até o desenvolvimento do RPG.</div>
-  </div>
+<div class="archive">
+<div class="eyebrow">09 / Registro restrito · ✧</div>
+<h2>O arquivo <em class="gold">incompleto.</em></h2>
+<p>Há uma parte da história de Rebecca que não será explicada aqui. Seu vínculo com uma instituição de pesquisa ligada aos registros da pandemia, assim como o encobrimento de informações do qual participou, permanecerá reservado para ser revelado durante o RPG.</p>
+<p>Este espaço é deliberadamente incompleto. Nenhum documento, nome, motivo ou consequência adicional será presumido antes de ser definido pela autora.</p>
+<button class="btn" id="open-secret">✧ Abrir nota reservada</button>
+<div class="secret" id="secret">REGISTRO RESERVADO: Rebecca teve contato com uma instituição de pesquisa relacionada aos registros da pandemia. Ao descobrir algo que a assustou, entrou em pânico e participou de um encobrimento. Uma pessoa ligada à instituição conhece o segredo. Os detalhes permanecem indefinidos até o desenvolvimento do RPG.</div>
+</div>
 </section>
 </main>
 
-<footer>
-  <div class="brand">Rebecca <span>✧</span> Devereaux</div>
-  <p>THE EMERALD GARDEN · LYTHAEL</p>
-  <p>❀ Um arquivo de personagem em constante construção ❀</p>
-</footer>
+<footer><div class="brand">Rebecca <span>✧</span> Devereaux</div><p>THE EMERALD GARDEN · LYTHAEL</p><p>❀ Um arquivo de personagem em constante construção ❀</p></footer>
 
 <script>
 const menu=document.getElementById('menu');
 const links=document.getElementById('links');
 menu.addEventListener('click',()=>{
-  links.classList.toggle('open');
-  menu.textContent=links.classList.contains('open')?'×':'☰';
+links.classList.toggle('open');
+menu.textContent=links.classList.contains('open')?'×':'☰';
 });
 links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
-  links.classList.remove('open');menu.textContent='☰';
+links.classList.remove('open');menu.textContent='☰';
 }));
-const button=document.getElementById('open-secret');
+document.getElementById('open-secret').addEventListener('click',()=>{
 const secret=document.getElementById('secret');
-button.addEventListener('click',()=>{
-  secret.classList.toggle('open');
-  button.textContent=secret.classList.contains('open')?'Fechar nota reservada':'✧ Abrir nota reservada';
+secret.classList.toggle('open');
+document.getElementById('open-secret').textContent=secret.classList.contains('open')?'Fechar nota reservada':'✧ Abrir nota reservada';
 });
 </script>
 </body>
